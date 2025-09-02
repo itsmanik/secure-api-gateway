@@ -2,11 +2,11 @@
   "name": "secure-api-gateway",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "server.js",
   "scripts": {
     "dev": "nodemon --exec \"node --loader ts-node/esm\" ./src/server.ts",
     "build": "tsc",
-    "start": "node dist/index.js",
+    "start": "node dist/server.js",
     "prisma:gen": "prisma generate",
     "prisma:migrate": "prisma migrate dev",
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -40,6 +40,7 @@
     "@types/node": "^24.3.0",
     "nodemon": "^3.1.10",
     "ts-node-dev": "^2.0.0",
+    "tsx": "^4.20.5",
     "typescript": "^5.9.2"
   },
   "type": "module"
