@@ -6,8 +6,9 @@ export function requestLogger(req: Request, res: Response, next: NextFunction) {
     res.on('finish', async () => {
         try {
             const duration = Date.now() - start;
-            const client = (req as any).client;
-            const clientId = client?.id ?? null;
+            // const client = (req as any).client;
+            // const clientId = client?.id ?? null;
+            const clientId = (req as any).userId ?? null;
             const apiKey = (req.header('x-api-key') ?? null) as string | null;
             const endpoint = req.originalUrl || req.url;
             const method = req.method;
